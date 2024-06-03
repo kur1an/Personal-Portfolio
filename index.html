@@ -11,7 +11,7 @@
 <div id="header">
 <div class="container">
     <nav>
-        <img src="images/akj.png" class="logo">
+        <img src="" class="logo">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -31,7 +31,7 @@
         <div class="container">
         <div class="row">
         <div class="about-col-1">
-            <img src="images/20220908_125113.jpg">
+            <img src="photo_2024-06-03_13-58-50.jpg">
         </div>
         <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
@@ -50,18 +50,51 @@
 </div>
 
 <div class="tab-contents" id="experience">
-    <ul>
-        <li><span>2024-25</span><br>Digital Marketing</li>
-        <li><span>2022-23</span><br>Data Science</li>
-        <li><span>2021-22</span><br>Mathematics</li>
+    <ul><script>
+        // JavaScript code goes here
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+    
+            if (tabname === 'experience') {
+                displayExperience();
+            }
+        }
+    
+        function displayExperience() {
+            var experienceTabContent = document.getElementById('experience');
+            experienceTabContent.innerHTML = '';
+            var ul = document.createElement('ul');
+            var experiences = [
+                { period: '2024-25', role: 'Digital Marketing Intern' },
+                { period: '2022-23', role: 'Data Science Intern' },
+                { period: '2021-22', role: 'Mathematics Tutor' }
+            ];
+            experiences.forEach(function (exp) {
+                var li = document.createElement('li');
+                li.innerHTML = '<span>' + exp.period + '</span><br>' + exp.role;
+                ul.appendChild(li);
+            });
+            experienceTabContent.appendChild(ul);
+        }
+    </script>
     </ul>
 </div>
 
 <div class="tab-contents" id="education">
     <ul>
         <li><span>2025</span><br>B.TECH from CEK Karunagappally</li>
-        <li><span>2027</span><br>M.TECH from IIT Delhi</li>
-        <li><span>2030</span><br>PhD from VIT Japan</li>
+        <li><span>2027</span><br>1</li>
+        <li><span>2030</span><br>2</li>
     </ul>
 </div>
 
@@ -92,7 +125,14 @@
     <a href="#">learn more</a>
     </div>
     </div>
-       
+      
+    
+
+
+
+
+
+    
     </div>
 </div>
 <script>
