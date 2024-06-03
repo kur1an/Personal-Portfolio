@@ -11,7 +11,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/20220908_125308.jpg);
+    background-image: url(Portfolio.jpeg);
     background-position: center;
     background-size: cover;
     transition-delay:0.2s ease-in-out; 
