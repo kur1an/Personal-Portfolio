@@ -208,13 +208,13 @@ nav ul li a:hover::after {
 
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: auto;
     grid-gap: 40px;
     margin-top: 50px;
 }
 
 .project-item {
-    background: #222;
+    background: #7f29291e;
     padding: 20px;
     border-radius: 10px;
 }
@@ -232,7 +232,7 @@ nav ul li a:hover::after {
 
 .project-item a.git-link {
     display: inline-block;
-    background-color: #ff004f;
+    background-color: #ff0202;
     color: #fff;
     padding: 8px 20px;
     border-radius: 5px;
@@ -241,7 +241,7 @@ nav ul li a:hover::after {
 }
 
 .project-item a.git-link:hover {
-    background-color: #d4006d;
+    background-color: #20ed01;
 }
 
 /* Contact Section */
