@@ -3,147 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amith Kurian Joseph</title>
+    <meta name="description" content="Amith Kurian Joseph's portfolio - a CSE student specializing in web and app development from India.">
+    <meta name="keywords" content="Amith Kurian Joseph, CSE Student, Web Development, App Development, UI/UX Design, Portfolio">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/3ec07fd5b1.js" crossorigin="anonymous"></script></head>
+    <script src="https://kit.fontawesome.com/3ec07fd5b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-jDtFuE8+3K/vZ1Pxnu6s6Tigf2cB/5RzKriapTpGmQ1a3HVLHk9l3+CHfMJeLr4JXNcfFkZSAAPJFO1nmXgiqA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .tab-contents { display: none; }
+        .active-tab { display: block; }
+        .tab-links { cursor: pointer; }
+        .active-link { font-weight: bold; }
+    </style>
+</head>
 <body>
-<div id="header">
-<div class="container">
-    <nav>
-        <img src="" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-    </nav>
-<div class="header-text">
-      <p>CSE Student</p>
-      <h1>Hi, I'm <span>Amith</span><br>Kurian Joseph From India</h1>
-</div>
-</div>
-</div>
-<!------------about------------->
-        <div id="about">
+    <div id="header">
         <div class="container">
-        <div class="row">
-        <div class="about-col-1">
-            <img src="photo_2024-06-03_13-58-50.jpg">
+            <nav>
+                <img src="logo.png" class="logo" alt="Website Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/13_UyQFcmVopnGngKqG5iDLhQSCr7HOr9" target="_blank">My Resume</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>CSE Student</p>
+                <h1>Hi, I'm <span>Amith</span><br>Kurian Joseph From India</h1>
+            </div>
         </div>
-        <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-<p>my name is my anything wgie consiti</p>
-        <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
+    </div>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="photo_2024-06-03_13-58-50.jpg" alt="Amith Kurian Joseph">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Amith Kurian Joseph. I am a CSE student with a passion for technology and design.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                        <p class="tab-links" onclick="opentab(event, 'certifications')">Certifications</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages:</span> Dart, C, JavaScript, Python, Java, CSS</li>
+                            <li><span>Technologies:</span> Express.js, Node.js, Android SDK, iOS SDK, CNN, Arduino IDE</li>
+                            <li><span>Concepts:</span> Compiler, Operating System, Cloud Computing, Deep Learning, Ethical Hacking, Voice Recognition</li>
+                            <li><span>Database:</span> MongoDB</li>
+                            <li><span>Soft Skills:</span> Problem-solving, Self-learning, Adaptability, Leadership, Analytical thinking, Communication, Flexibility, Delegation, Teamwork, Influence</li>
+                            <li><span>Others:</span> Command line tools, Package managers, Git & GitHub, IDEs</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Feb 2024</span><br>Data Science Intern at Bharat Intern (Remote)</li>
+                            <li><span>Jan 2024</span><br>Android Development Intern at Codeway Solutions (Remote)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Expected June 2025</span><br>Bachelor of Technology in Computer Science Engineering (B.Tech CSE) from College of Engineering Karunagappally, Kollam. GPA: 4.72 / 10</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Aug 2023 – Oct 2023</span><br>NPTEL Online Certification | Google Cloud Computing Foundations (8-week course)</li>
+                            <li><span>Oct 2023</span><br>Technovalley AKS on Udemy | Cyber Security Cadet - Ethical Hacking (7.5-hour course)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-<div class="tab-contents active-tab" id="skills">
-    <ul>
-        <li><span>UI/UX</span><br>Desisigning Web/App Intterface</li>
-        <li><span>Web Devolpment</span><br>Web APp Devolpment</li>
-        <li><span>App Devolpment</span><br>Building Android/iOs apps</li>
-    </ul>
-</div>
-
-<div class="tab-contents" id="experience">
-    <ul><script>
-        // JavaScript code goes here
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-    
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-    
-            if (tabname === 'experience') {
-                displayExperience();
-            }
-        }
-    
-        function displayExperience() {
-            var experienceTabContent = document.getElementById('experience');
-            experienceTabContent.innerHTML = '';
-            var ul = document.createElement('ul');
-            var experiences = [
-                { period: '2024-25', role: 'Digital Marketing Intern' },
-                { period: '2022-23', role: 'Data Science Intern' },
-                { period: '2021-22', role: 'Mathematics Tutor' }
-            ];
-            experiences.forEach(function (exp) {
-                var li = document.createElement('li');
-                li.innerHTML = '<span>' + exp.period + '</span><br>' + exp.role;
-                ul.appendChild(li);
-            });
-            experienceTabContent.appendChild(ul);
-        }
-    </script>
-    </ul>
-</div>
-
-<div class="tab-contents" id="education">
-    <ul>
-        <li><span>2025</span><br>B.TECH from CEK Karunagappally</li>
-        <li><span>2027</span><br>1</li>
-        <li><span>2030</span><br></li>
-    </ul>
-</div>
-
-</div>
-</div>
-</div>
-<!---------services------->
-<div id="services">
+    </div>
+    <!-- Projects Section -->
+   <!-- Projects Section -->
+<div id="projects">
     <div class="container">
-    <h1 class="sub-title">My Services</h1>
-    <div class="services-list">
-    <div>
-        <i class="fa-solid fa-code"></i>
-        <h2>Web Design</h2>
-        <p>yhen it some on the purposes for mine</p>
-    <a href="#">learn more</a>
-    </div>
-    <div>
-        <i class="fa-solid fa-crop"></i>
-        <h2>UI/UX Design</h2>
-        <p>yhen it some on the purposes for mine</p>
-    <a href="#">learn more</a>
-    </div>
-    <div>
-        <i class="fa-brands fa-app-store-ios"></i>
-        <h2>App  Design</h2>
-        <p>yhen it some on the purposes for mine</p>
-    <a href="#">learn more</a>
-    </div>
-    </div>
-   
-    
+        <h1 class="sub-title">Projects</h1>
+        <div class="projects-list">
+
+            <!-- Tab Links for Projects -->
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab(event, 'bus_project')">BusT</p>
+                <p class="tab-links" onclick="opentab(event, 'facial_project')">Human Facial Recognition System</p>
+                <p class="tab-links" onclick="opentab(event, 'home_auto_project')">Home Automation with Arduino</p>
+                <p class="tab-links" onclick="opentab(event, 'portfolio_project')">Personal Portfolio</p>
+            </div>
+
+            <!-- Project Details -->
+            <div class="tab-contents active-tab" id="bus_project">
+                <div class="project-item">
+                    <h3> <i class="fab fa-flutter"></i> Flutter, <i class="fab fa-node-js"></i> Node.js, <i class="fab fa-aws"></i> MongoDB | |</h3>
+                    <i class="fab fa-flutter"></i> <!-- Icon for Flutter -->
+                    <i class="fab fa-node-js"></i> <!-- Icon for Node.js -->
+                    <!-- Icon for Python -->
+                    <i class="fab fa-html5"></i> <!-- Icon for HTML -->
+                    <a href="https://github.com/kur1an/bust_mini.git" target="_blank" class="git-link">Git</a> <!-- Add class "git-link" -->
+                    <p>Spearheaded the development of BusT: Private & Public Bus Timing, a revolutionary mobile app designed to streamline commuting experiences for users across Kerala.</p>
+                    <p>Employed Flutter for frontend development, ensuring a sleek UI across platforms. Engineered a robust backend with Node.js, leveraging MongoDB for efficient data management.</p>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="facial_project">
+                <div class="project-item">
+                    <h3><i class="fab fa-python"></i> <i class="fas fa-brain"></i>  <i class="fas fa-layer-group"></i>  Deep Learning, CNN | </h3>
+                    <a href="https://github.com/kur1an/Human-Facial-Recognition-System.git" target="_blank" class="git-link">Git</a> <!-- Add class "git-link" -->
+                    <p>Designed and implemented a sophisticated facial recognition algorithm using deep learning frameworks such as TensorFlow or PyTorch.</p>
+                    <p>Successfully deployed the Human Facial Recognition System, providing clients with a reliable and efficient solution for identity verification.</p>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="home_auto_project">
+                <div class="project-item">
+                    </h3> <i class="fab fa-html5"></i> <!-- Icon for HTML --><i class="fab fa-js"></i> <!-- Icon for JavaScript --><i class="fas fa-microchip"></i </h3>
+                    <a href="https://github.com/kur1an/Home-Automation-.git" target="_blank" class="git-link">Git</a> <!-- Add class "git-link" -->
+                    <p>Integrated HTML for frontend control, Node.js for server-side logic, and Arduino IDE for microcontroller programming. Implemented innovative features like speech recognition for voice-activated device control.</p>
+                    <p>Successfully deployed the Home Automation system, providing users with a convenient and efficient solution for controlling home devices remotely or through voice commands.</p>
+                </div>
+            </div>
+
+            <div class="tab-contents" id="portfolio_project">
+                <div class="project-item">
+                    <h3><i class="fab fa-html5"></i> CSS |</h3>
+                    <a href="https://github.com/kur1an/Personal-Portfolio.git" target="_blank" class="git-link">Git</a> <!-- Add class "git-link" -->
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-   
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
 
-</script>
-</body>
-</html>
+        <!-- Services Section -->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <h2>Web Design</h2>
+                        <p>Providing web design services to create visually appealing and user-friendly websites.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop" aria-hidden="true"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>Designing intuitive and engaging user interfaces for web and mobile applications.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store-ios" aria-hidden="true"></i>
+                        <h2>App Design</h2>
+                        <p>Creating designs for mobile applications on both Android and iOS platforms.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                        <h2>Web Development</h2>
+                        <p>Creating functional and responsive websites tailored to your needs.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-mobile-alt" aria-hidden="true"></i>
+                        <h2>Mobile App Development</h2>
+                        <p>Designing and developing mobile applications for Android and iOS platforms.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-shield-alt" aria-hidden="true"></i>
+                        <h2>Data Science & Cyber Security</h2>
+                        <p>Providing solutions in data science, machine learning, and cyber security.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+                        <h2>Cloud Computing</h2>
+                        <p>Offering cloud computing services including setup and management of cloud infrastructure.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cogs" aria-hidden="true"></i>
+                        <h2>Technical Consultation & Training</h2>
+                        <p>Providing consultation and training in various technical areas such as programming languages and software development practices.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            function opentab(event, tabname) {
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                
+                for (var tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (var tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+    
+            document.addEventListener("DOMContentLoaded", function () {
+                // Ensure the first tab is active by default
+                var defaultTab = document.querySelector('.tab-links.active-link');
+                if (defaultTab) {
+                    defaultTab.click();
+                } else {
+                    document.querySelector('.tab-links').click();
+                }
+            });
+        </script>
+    </body>
+    </html>
+    

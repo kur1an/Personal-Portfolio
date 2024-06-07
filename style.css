@@ -1,49 +1,54 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
+
+body {
     background: #080808;
     color: #fff;
 }
-#header{
+
+#header {
     width: 100%;
     height: 100vh;
     background-image: url(Portfolio.jpeg);
     background-position: center;
     background-size: cover;
-    transition-delay:0.2s ease-in-out; 
-    
-    
-} 
-.container{
+    transition-delay: 0.2s ease-in-out;
+}
+
+.container {
     padding: 10px 10%;
 }
-nav{
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.logo{
+
+.logo {
     width: 240px;
     margin-right: 80px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
-nav ul li a{
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
-nav ul li a::after{
+
+nav ul li a::after {
     content: '';
     width: 0%;
     height: 3px;
@@ -53,64 +58,77 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover::after {
     width: 100%;
 }
-.header-text{
+
+.header-text {
     margin-top: 20%;
     font-size: 30px;
 }
-.header-text h1{
+
+.header-text h1 {
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text h1 span{
+
+.header-text h1 span {
     color: #ff004f;
 }
+
 .header-text p {
     font-size: 50px;
     color: #e90e0e;
     font-family: serif;
-    font-style:italic;
+    font-style: italic;
 }
-/* -----------about----------- */
-#about{
+
+/* About Section */
+#about {
     padding: 80px 0;
     color: #ababab;
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.about-col-1{
+.about-col-1 {
     flex-basis: 35%;
 }
-.about-col-1 img{
-  width: 100%;
+
+.about-col-1 img {
+    width: 100%;
     border-radius: 15px;
 }
-.about-col-2{
+
+.about-col-2 {
     flex-basis: 60%;
 }
-.sub-title{
+
+.sub-title {
     font-size: 60px;
     font-weight: 600;
-    color:#fff;
+    color: #fff;
 }
-.tab-titles{
+
+.tab-titles {
     display: flex;
     margin: 20px 0 40px;
 }
-.tab-links{
+
+.tab-links {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
 }
-.tab-links::after{
+
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -120,31 +138,108 @@ nav ul li a:hover::after{
     bottom: -8px;
     transition: 0.5s;
 }
-.tab-links.active-link::after{
-    width: 50%;
 
+.tab-links.active-link::after {
+    width: 50%;
 }
-.tab-contents ul li{
+
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0;
 }
-.tab-contents ul li span{
+
+.tab-contents ul li span {
     color: #b54769;
     font-size: 14px;
 }
-.tab-contents{
+
+.tab-contents {
     display: none;
 }
-.tab-contents.active-tab{
-    display:block;
+
+.tab-contents.active-tab {
+    display: block;
 }
-/*---------services------*/
-#services{
-    padding: grid;
+
+/* Services Section */
+#services {
+    padding: 80px 0;
 }
-.services-list{
+
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+}
+
+.services-list div {
+    text-align: center;
+}
+
+.services-list i {
+    font-size: 50px;
+    color: #ff004f;
+    margin-bottom: 10px;
+}
+
+.services-list h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.services-list p {
+    font-size: 16px;
+    color: #ababab;
+}
+
+.services-list a {
+    text-decoration: none;
+    color: #ff004f;
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 80px 0;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project-item {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-item h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #ababab;
+    margin-bottom: 10px;
+}
+
+.project-item a.git-link {
+    display: inline-block;
+    background-color: #ff004f;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-item a.git-link:hover {
+    background-color: #d4006d;
 }
