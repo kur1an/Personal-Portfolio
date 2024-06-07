@@ -243,3 +243,94 @@ nav ul li a:hover::after {
 .project-item a.git-link:hover {
     background-color: #d4006d;
 }
+
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.contact-info div {
+    flex-basis: 45%;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contact-info ul li a:hover {
+    color: #ff004f;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #ff004f;
+}
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* Large Download Button */
+.resume-download-btn {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff004f;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.resume-download-btn:hover {
+    background-color: #d4006d;
+}
