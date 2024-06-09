@@ -141,7 +141,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #ffffff;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -241,7 +241,7 @@ nav ul li a:hover::after {
 
 .project-item a.git-link {
     display: inline-block;
-    background-color: #ff0202;
+    background-color: transparent; /* Transparent background */
     color: #fff;
     padding: 8px 20px;
     border-radius: 5px;
@@ -250,8 +250,9 @@ nav ul li a:hover::after {
 }
 
 .project-item a.git-link:hover {
-    background-color: #20ed01;
+    background-color: transparent; /* Transparent background on hover */
 }
+
 
 /* Contact Section */
 #contact {
