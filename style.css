@@ -358,3 +358,20 @@ nav ul li a:hover::after {
         font-size: 20px;
     }
 }
+/* Example styling for the buttons */
+#pageUpButton,
+#pageDownButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pageDownButton {
+    bottom: 690px; /* Adjust position if needed */
+}
