@@ -61,7 +61,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #1e2729;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -220,12 +220,14 @@ nav ul li a:hover::after {
     grid-template-columns: auto;
     grid-gap: 40px;
     margin-top: 50px;
+    
 }
 
-.project-item {
+.project-item  {
     background: #0b0b0be8;
     padding: 20px;
     border-radius: 10px;
+    
 }
 
 .project-item h2 {
@@ -298,11 +300,37 @@ nav ul li a:hover::after {
     border: none;
     border-radius: 10px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    position: relative; /* Add relative positioning */
+    overflow: hidden; /* Hide overflowing content */
 }
 
-.resume-download-btn:hover {
-    background-color: #d4006d;
+.resume-download-btn::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute;
+    top: -50%; /* Initial position */
+    left: -50%;
+    width: 200%; /* Extend beyond the button */
+    height: 200%;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    border-radius: 50%; /* Circular shape */
+    animation: sparkle 1.5s linear infinite; /* Sparkle animation */
+    opacity: 0; /* Start with no opacity */
+    pointer-events: none; /* Prevent the pseudo-element from being interacted with */
+}
+
+.resume-download-btn:hover::before {
+    animation-play-state: running; /* Start animation on hover */
+    opacity: 1; /* Show the sparkle effect on hover */
+}
+
+@keyframes sparkle {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg); /* Initial position and rotation */
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg); /* Rotate a full circle */
+        opacity: 0; /* Fade out at the end */
+    }
 }
 
 /* Social Links */
@@ -359,6 +387,52 @@ nav ul li a:hover::after {
         font-size: 20px;
     }
 }
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 100px; /* Adjust the width of your logo */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-links ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: #ff004f;
+}
+
 /* Example styling for the buttons */
 #pageUpButton,
 #pageDownButton {
