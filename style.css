@@ -1,3 +1,5 @@
+
+
 /* General Styles */
 * {
     margin: 0;
@@ -296,7 +298,7 @@ nav ul li a:hover::after {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
-    background-color: #ff004f;
+    background-color: #ff0000;
     border: none;
     border-radius: 10px;
     text-decoration: none;
@@ -386,12 +388,27 @@ nav ul li a:hover::after {
     .social-links a {
         font-size: 20px;
     }
-}
+}/* Footer Styles */
+/* Footer Styles */
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #333; /* Fallback color */
+    background-image: linear-gradient(135deg, 
+                        #0000ff, 
+                        #ff00ff, 
+                        #ffff00, 
+                        #00ff00, 
+                        #00ffff, 
+                        #0000ff);
+    background-size: 1000% 1000%; /* Size of the gradient */
     color: #fff;
     padding: 30px 0;
+    animation: lightning 10s ease infinite; /* Animation for lightning effect */
+}
+
+@keyframes lightning {
+    0% { background-position: 0% 50%; } /* Start position of the gradient */
+    100% { background-position: 100% 50%; } /* End position of the gradient */
 }
 
 .container {
@@ -427,12 +444,31 @@ footer {
 .footer-links ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .footer-links ul li a:hover {
     color: #ff004f;
 }
 
+
+/* View Count Styles */
+.view-count {
+    font-size: 16px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: linear-gradient(to right, #ff004f, #ffcc00); /* Gradient effect */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.view-count span {
+    font-weight: bold;
+    margin-left: 5px;
+}
 /* Example styling for the buttons */
 #pageUpButton,
 #pageDownButton {

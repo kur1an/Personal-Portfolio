@@ -50,4 +50,19 @@ function scrollToBottom() {
         top: document.body.scrollHeight,
         behavior: "smooth"
     });
+}  
+
+window.onload = function() {
+    // Check if view count exists in local storage
+    if(localStorage.getItem('viewCount')) {
+        // If exists, increment the count
+        var count = parseInt(localStorage.getItem('viewCount'));
+        count++;
+        localStorage.setItem('viewCount', count);
+        document.getElementById('viewCount').textContent = count;
+    } else {
+        // If not exists, set view count to 1
+        localStorage.setItem('viewCount', 1);
+        document.getElementById('viewCount').textContent = 1;
+    }
 }
