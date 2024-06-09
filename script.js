@@ -66,3 +66,34 @@ window.onload = function() {
         document.getElementById('viewCount').textContent = 1;
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const loader = document.getElementById('loader');
+    const mainContent = document.getElementById('main-content');
+    const progressBar = document.getElementById('progress-bar');
+
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 1;
+        progressBar.style.width = progress + '%';
+
+        if (progress >= 50) {
+            clearInterval(interval);
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+                mainContent.style.display = 'block';
+                document.body.style.overflow = 'auto';  // Unlock scrolling
+            }, 500);
+        }
+    }, 50);
+});
+
+// Event listener for PageUp and PageDown keys
+window.addEventListener("keydown", function(event) {
+    if (event.key === "PageUp") {
+        scrollToTop();
+    } else if (event.key === "PageDown") {
+        scrollToBottom();
+    }
+});
