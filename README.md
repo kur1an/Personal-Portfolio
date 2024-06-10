@@ -56,3 +56,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 Feel free to explore, modify, and share this portfolio website. If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request. Thank you for checking out my portfolio!
+hi
